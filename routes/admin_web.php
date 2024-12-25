@@ -16,5 +16,5 @@ use App\Http\Controllers\Backend\PageController;
 */
 
 Route::prefix('admin')->namespace('Backend')->middleware('auth:admin_user')->group(function () {
-    Route::get('/', [PageController::class, 'home']);
+    Route::get('/', [PageController::class, 'home'])->name('admin.home');
 });
